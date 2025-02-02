@@ -49,7 +49,7 @@ body {
 }
 .God{
   width: 100%;
-  height: 3000px;
+  height: 4000px;
 }
 .head{
   background: var(--background_dark_main);
@@ -355,4 +355,35 @@ nav{
   width: 8px;
   height: 8px;
   transform: translate(978px, -3px);
+}
+.section-analysis{
+  width: 100%;
+  margin-top: 90px;
+}
+.section-analysis-top {
+  width: 100%;
+  text-align: center;
+}
+.section-analysis-top h2{
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0px 0;
+  transform: translateX(-25px);
+}
+.section-analysis-top p{
+  font-size: 18px;
+  color: var(--text_light_secondary);
+  font-weight: 600;
+}
+.section-analysis-top a{
+  margin-top: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-30px);
+  background: var(--button_dark_primary);
+  text-decoration: none;
+  color: var(--background_light_main);
+  padding: 5px 30px;
+  border-radius: 45px;
 }
