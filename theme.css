@@ -346,7 +346,7 @@ nav{
 .test-s{
   width: 25px;
   height: 25px;
-  transform: translate(970px, -12px);
+  transform: translate(970px, -50%);
 }
 .test-tt{
   background: #fff;
@@ -354,7 +354,7 @@ nav{
   position: absolute;
   width: 8px;
   height: 8px;
-  transform: translate(978px, -3px);
+  transform: translate(978.555555px, -50%);
 }
 .section-analysis{
   width: 100%;
@@ -529,22 +529,26 @@ nav{
     height: 445px;
     margin-top: 30px;
 }
-.box-main-bottom-left button{
-  width: 100%;
+.click{
+  width: 84%;
   background-color: #2d2d32;
   border: 0;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  padding: 18px 20px;
+  padding: 18px 18px;
   text-align: left;
 }
-.click{
-  width: 100%;
-}
-.box-main-bottom-left button:hover{
+ .set-click{
   background-color: #39393c;
   border-right: 3px solid #05a8fb;
+  font-weight: 900;
+ }
+.box-main-bottom-right-main{
+  display: none;
+}
+.show{
+  display: block;
 }
 .box-main-bottom-right{
   width: 84%;

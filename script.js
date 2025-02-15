@@ -1,49 +1,65 @@
-let buttom = document.querySelector(".click1");
-buttom.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+// click
+
+let click = document.querySelectorAll(".click");
+let right = document.querySelectorAll(".box-main-bottom-right-main");
+click[0].classList.add("set-click");
+right[0].classList.add("show")
+click.forEach(function tab_iterator(item, index){
+    item.addEventListener("click", function onclick(e){
+        click.forEach(function remove_classes(element){
+            element.classList.remove("set-click");
+        });
+        let selectedElement = e.target;
+        selectedElement.classList.add("set-click");
+        right.forEach(function remove_classes_from_content(element){
+            element.classList.remove("show");
+        });
+        let counterpart = right[index];
+        counterpart.classList.add("show");
+    });
+});
+
+// /click
+
+// Number
+
+let element = document.querySelector(".span-one");
+ function get_elemet(){
+    let element_next = element.textContent;
+    element_next = Number(element.textContent)
+    return element_next
 }
-let buttom_2 = document.querySelector(".click2");
-buttom_2.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+function next(){
+     let next_get_element = get_elemet();
+    let next_next = next_get_element + 1;
+    element.textContent = next_next
 }
-let buttom_3 = document.querySelector(".click3");
-buttom_3.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+setInterval(next,250);
+
+let element_two = document.querySelector(".span-two");
+ function get_elemet_two(){
+    let element_next_two = element_two.textContent;
+    element_next_two = Number(element_two.textContent)
+    return element_next_two
 }
-let buttom_4 = document.querySelector(".click4");
-buttom_4.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+function next_two(){
+     let next_get_element_two = get_elemet_two();
+    let next_next_two = next_get_element_two + 1;
+    element_two.textContent = next_next_two
 }
-let buttom_5 = document.querySelector(".click5");
-buttom_5.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+setInterval(next_two,1000)
+
+let element_sex = document.querySelector(".span-six");
+ function get_elemet_sex(){
+    let element_next_sex = element_sex.textContent;
+    element_next_sex = Number(element_sex.textContent)
+    return element_next_sex
 }
-let buttom_6 = document.querySelector(".click6");
-buttom_6.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
+function next_sex(){
+     let next_get_element_sex = get_elemet_sex();
+    let next_next_sex = next_get_element_sex + 1;
+    element_sex.textContent = next_next_sex
 }
-let buttom_7 = document.querySelector(".click7");
-buttom_7.addEventListener("click", onsubmit)
-function onsubmit(){
-    let input_el = document.querySelector(".one");
-    let value = input_el.value;
-    console.log(value)
-}
+setInterval(next_sex,10000);
+
+// /Number
