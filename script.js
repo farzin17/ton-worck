@@ -63,3 +63,40 @@ function next_sex(){
 setInterval(next_sex,10000);
 
 // /Number
+
+// let tabs_element = document.querySelector("phone");
+// let content_element = document.querySelector("head-bottom-center-phone");
+// tabs_element.forEach(function tabs_iterators(items, indexs){
+//     items.addEventListener("click", function onclicks(e){
+//         tabs_element.forEach(function removes_class(elements){
+//             elements.classList.remove("phone-p")
+//         });
+//         let selectedElements = e.target;
+//         selectedElements.classList.add("phone-p");
+//         content_element.forEach(function remove_classes_element(element) {
+//             element.classList.remove("test-phone");
+//         });
+//         let counterpart_contrnt = content_element[indexs];
+//         counterpart_contrnt.classList.add("test-phone");
+//     });
+// });
+let tabs_element = document.querySelectorAll(".phone");
+let content_element = document.querySelectorAll(".head-bottom-center-phone");
+
+tabs_element.forEach(function(items, indexs) {
+    items.addEventListener("click", function(e) {
+        tabs_element.forEach(function(elements) {
+            elements.classList.remove("phone-p");
+        });
+
+        let selectedElements = e.target;
+        selectedElements.classList.add("phone-p");
+
+        content_element.forEach(function(element) {
+            element.classList.remove("test-phone");
+        });
+
+        let counterpart_content = content_element[indexs];
+        counterpart_content.classList.add("test-phone");
+    });
+});
